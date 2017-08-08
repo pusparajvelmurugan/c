@@ -1,21 +1,19 @@
-#include<stdio.h>
-void main()
+#include <stdio.h>
+int main()
 {
-int a=20;
-clrscr();
-printf("enter the number:");
-scanf("%d",&a);
-if(a==0)
-{
-printf("zero");
-}
-else if(a>0)
-{
-printf("positive");
-}
-else
-{
-printf("negative");
-}
-getch();
+    double number;
+
+    printf("Enter a number: ");
+    scanf("%lf", &number);
+
+    if (number <= 0.0)
+    {
+        if (number == 0.0)
+            printf("You entered 0.");
+        else
+            printf("You entered a negative number.");
+    }
+    else
+        printf("You entered a positive number.");
+    return 0;
 }
